@@ -4,11 +4,12 @@ import com.tony.austin.service.api.domain.SendRequest;
 import com.tony.austin.service.api.domain.SendResponse;
 
 /**
- * 发送接口
+ * 撤回接口
  */
-public interface SendService {
+public interface RecallService {
     /**
-     * 单文案发送接口
+     * 根据模板Id撤回消息
      */
-    SendResponse send(SendRequest sendRequest);
+    SendResponse recall(SendRequest sendRequest);
+
 }
