@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * 发送接口返回值
  */
@@ -12,7 +14,10 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-public class SendResponse {
+public class SendResponse implements Serializable {
+
+    private static final long serialVersionUID = -5183243575269033152L;
+
     /**
      * 响应状态
      */

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -16,7 +17,10 @@ import java.util.Map;
 @NoArgsConstructor
 @Builder
 @Accessors(chain = true)
-public class MessageParam {
+public class MessageParam implements Serializable {
+
+    private static final long serialVersionUID = -5183243575269033152L;
+
     /**
      * 接收者
      * 多个用，逗号分隔

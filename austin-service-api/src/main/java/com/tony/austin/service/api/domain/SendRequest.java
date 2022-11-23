@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * 发送/撤回接口的参数
  */
@@ -14,7 +16,10 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @Builder
 @Accessors(chain = true)
-public class SendRequest {
+public class SendRequest implements Serializable {
+
+    private static final long serialVersionUID = -5183243575269033152L;
+
     /**
      * 执行业务类型
      * send:发送消息
